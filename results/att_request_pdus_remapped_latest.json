@@ -1,0 +1,216 @@
+{
+  "ATT_Exchange_MTU_Request": {
+    "opcode": "0x02",
+    "arguments": {
+      "mtu": {
+        "type": "uint16",
+        "range": [
+          23,
+          65535
+        ]
+      }
+    }
+  },
+  "ATT_Find_Information_Request": {
+    "opcode": "0x04",
+    "arguments": {
+      "start": {
+        "type": "hex",
+        "range": [
+          1,
+          65535
+        ]
+      },
+      "end": {
+        "type": "hex",
+        "range": [
+          1,
+          65535
+        ]
+      }
+    }
+  },
+  "ATT_Find_By_Type_Value_Request": {
+    "opcode": "0x06",
+    "arguments": {
+      "start": {
+        "type": "hex",
+        "range": [
+          1,
+          65535
+        ]
+      },
+      "end": {
+        "type": "hex",
+        "range": [
+          1,
+          65535
+        ]
+      },
+      "uuid": {
+        "type": "hex",
+        "range": [
+          1,
+          65535
+        ]
+      },
+      "data": {
+        "type": "variable",
+        "range": [
+          0,
+          "ATT_MTU-7"
+        ]
+      }
+    }
+  },
+  "ATT_Read_By_Type_Request": {
+    "opcode": "0x08",
+    "arguments": {
+      "start": {
+        "type": "hex",
+        "range": [
+          1,
+          65535
+        ]
+      },
+      "end": {
+        "type": "hex",
+        "range": [
+          1,
+          65535
+        ]
+      },
+      "uuid": {
+        "type": "uuid",
+        "range": [
+          "2-octet or 16-octet UUID"
+        ]
+      }
+    }
+  },
+  "ATT_Read_Request": {
+    "opcode": "0x0A",
+    "arguments": {
+      "gatt_handle": {
+        "type": "hex",
+        "range": [
+          1,
+          65535
+        ]
+      }
+    }
+  },
+  "ATT_Read_Blob_Request": {
+    "opcode": "0x0C",
+    "arguments": {
+      "gatt_handle": {
+        "type": "hex",
+        "range": [
+          1,
+          65535
+        ]
+      },
+      "offset": {
+        "type": "uint16",
+        "range": [
+          0,
+          511
+        ]
+      }
+    }
+  },
+  "ATT_Read_Multiple_Request": {
+    "opcode": "0x0E",
+    "arguments": {
+      "handles": {
+        "type": "list<hex>",
+        "range": [
+          1,
+          65535
+        ]
+      }
+    }
+  },
+  "ATT_Read_By_Group_Type_Request": {
+    "opcode": "0x10",
+    "arguments": {
+      "start": {
+        "type": "hex",
+        "range": [
+          1,
+          65535
+        ]
+      },
+      "end": {
+        "type": "hex",
+        "range": [
+          1,
+          65535
+        ]
+      },
+      "uuid": {
+        "type": "uuid",
+        "range": [
+          "2-octet or 16-octet UUID"
+        ]
+      }
+    }
+  },
+  "ATT_Write_Request": {
+    "opcode": "0x12",
+    "arguments": {
+      "gatt_handle": {
+        "type": "hex",
+        "range": [
+          1,
+          65535
+        ]
+      },
+      "data": {
+        "type": "variable",
+        "range": [
+          0,
+          "ATT_MTU-3"
+        ]
+      }
+    }
+  },
+  "ATT_Prepare_Write_Request": {
+    "opcode": "0x16",
+    "arguments": {
+      "gatt_handle": {
+        "type": "hex",
+        "range": [
+          1,
+          65535
+        ]
+      },
+      "offset": {
+        "type": "uint16",
+        "range": [
+          0,
+          511
+        ]
+      },
+      "data": {
+        "type": "variable",
+        "range": [
+          0,
+          "ATT_MTU-5"
+        ]
+      }
+    }
+  },
+  "ATT_Execute_Write_Request": {
+    "opcode": "0x18",
+    "arguments": {
+      "flags": {
+        "type": "uint8",
+        "range": [
+          0,
+          1
+        ]
+      }
+    }
+  }
+}

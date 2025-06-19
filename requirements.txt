@@ -1,0 +1,3 @@
+scapy==2.6.1
+whad==1.2.8
+pymupdf

@@ -1,0 +1,144 @@
+{
+    "ATT_Error_Response": {
+        "fields": [
+            "request",
+            "handle",
+            "ecode"
+        ]
+    },
+    "ATT_Exchange_MTU_Request": {
+        "fields": [
+            "mtu"
+        ]
+    },
+    "ATT_Exchange_MTU_Response": {
+        "fields": [
+            "mtu"
+        ]
+    },
+    "ATT_Execute_Write_Request": {
+        "fields": [
+            "flags"
+        ]
+    },
+    "ATT_Find_By_Type_Value_Request": {
+        "fields": [
+            "start",
+            "end",
+            "uuid",
+            "data"
+        ]
+    },
+    "ATT_Find_By_Type_Value_Response": {
+        "fields": [
+            "handles"
+        ]
+    },
+    "ATT_Find_Information_Request": {
+        "fields": [
+            "start",
+            "end"
+        ]
+    },
+    "ATT_Find_Information_Response": {
+        "fields": [
+            "format",
+            "handles"
+        ]
+    },
+    "ATT_Handle_Value_Indication": {
+        "fields": [
+            "gatt_handle",
+            "value"
+        ]
+    },
+    "ATT_Handle_Value_Notification": {
+        "fields": [
+            "gatt_handle",
+            "value"
+        ]
+    },
+    "ATT_Prepare_Write_Request": {
+        "fields": [
+            "gatt_handle",
+            "offset",
+            "data"
+        ]
+    },
+    "ATT_Prepare_Write_Response": {
+        "fields": [
+            "gatt_handle",
+            "offset",
+            "data"
+        ]
+    },
+    "ATT_Read_Blob_Request": {
+        "fields": [
+            "gatt_handle",
+            "offset"
+        ]
+    },
+    "ATT_Read_Blob_Response": {
+        "fields": [
+            "value"
+        ]
+    },
+    "ATT_Read_By_Group_Type_Request": {
+        "fields": [
+            "start",
+            "end",
+            "uuid"
+        ]
+    },
+    "ATT_Read_By_Group_Type_Response": {
+        "fields": [
+            "length",
+            "data"
+        ]
+    },
+    "ATT_Read_By_Type_Request": {
+        "fields": [
+            "start",
+            "end",
+            "uuid"
+        ]
+    },
+    "ATT_Read_By_Type_Response": {
+        "fields": [
+            "len",
+            "handles"
+        ]
+    },
+    "ATT_Read_Multiple_Request": {
+        "fields": [
+            "handles"
+        ]
+    },
+    "ATT_Read_Multiple_Response": {
+        "fields": [
+            "values"
+        ]
+    },
+    "ATT_Read_Request": {
+        "fields": [
+            "gatt_handle"
+        ]
+    },
+    "ATT_Read_Response": {
+        "fields": [
+            "value"
+        ]
+    },
+    "ATT_Write_Command": {
+        "fields": [
+            "gatt_handle",
+            "data"
+        ]
+    },
+    "ATT_Write_Request": {
+        "fields": [
+            "gatt_handle",
+            "data"
+        ]
+    }
+}
