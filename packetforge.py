@@ -113,7 +113,8 @@ def use_random_packet_from_json(json_file):
             sys.exit(0)
         arguments[k] = random.randint(v["range"][0], v["range"][1])
     ATT_Layer_packet = ATT_layer_packet_class(**arguments)
-    fill_packet(int(data[key]["opcode"],16) ,ATT_Layer_packet)
+    packet = fill_packet(int(data[key]["opcode"],16) ,ATT_Layer_packet)
+    return packet
 
 def fill_packet(opcode, ATT_Layer_packet):
     att_layer = (
@@ -127,7 +128,7 @@ def fill_packet(opcode, ATT_Layer_packet):
     crc  = BTLE.compute_crc(raw(paquet))
     paquet.crc = int.from_bytes(crc, byteorder="little")
     paquet.show()
-
+    return paquet
 
 if __name__ == "__main__":
     # Use the json file outputted from the element

@@ -10,7 +10,7 @@ from ctrlutils import *
 from packetforge import *
 
 
-TARGET_BD_ADDR = "18:04:ed:be:d8:a4"
+TARGET_BD_ADDR = "44:17:93:5E:39:82"
 
 central = Central(UartDevice("/dev/ttyACM0"))
 tl = TrafficLogger(central)
@@ -59,8 +59,9 @@ print("fuzzing ongoing...")
 start = time.time()
 try :
     while True :
-        central.send_pdu(fuzzwrite())
+        central.send_pdu(use_random_packet_from_json("results/att_request_pdus_remapped_latest.json"))
         time.sleep(0.1)
+        break
         #central.send_pdu(fuzzman2())
         
 except KeyboardInterrupt :
